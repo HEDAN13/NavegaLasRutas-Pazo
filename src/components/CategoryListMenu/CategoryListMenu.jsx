@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import "./CategoryListMenu.css";
 import { getCategories } from "../async";
+import { useNavigate, useParams } from "react-router";
 
 export default function CategoryListMenu() {
+  const navigate = useNavigate();
+  const { categoria } = useParams();
   const [categorias, setCategorias] = useState([]);
-  const [categoriaSeleccionada, setCategoriaSeleccionada] =
-    useState("Categorias");
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(categoria);
 
   useEffect(() => {
     const fetchCat = async () => {
@@ -14,6 +16,16 @@ export default function CategoryListMenu() {
     };
     fetchCat();
   }, []);
+
+  useEffect(() => {
+    if (categoriaSeleccionada && categoriaSeleccionada !== "Categorias") {
+      navigate(`/category/${categoriaSeleccionada}`);
+    } else if (categoriaSeleccionada === "Categorias") {
+      navigate("/");
+    } else {
+      setCategoriaSeleccionada("Categorias");
+    }
+  }, [categoriaSeleccionada]);
 
   const handleChange = (event) => {
     setCategoriaSeleccionada(event.target.value);

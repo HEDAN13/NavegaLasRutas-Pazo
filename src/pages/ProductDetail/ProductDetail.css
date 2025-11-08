@@ -1,0 +1,14 @@
+.carousel-custom-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.detail-title {
+  margin: 2rem 2rem 2rem 1rem;
+  padding-right: 4rem;
+}
+
+.detail-description {
+  margin: 1rem 2rem 2rem 1rem;
+  padding-right: 4rem;
+}

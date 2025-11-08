@@ -17,8 +17,9 @@ export async function getProductById(id) {
 }
 
 export async function getCategories() {
-  const response = await fetch("https://dummyjson.com/products/category-list");
-  const categories = await response.json();
+  const response = await getProducts();
+  const categorias = response.map((item) => item.category);
+  const categories = [...new Set(categorias)];
   return categories;
 }
 
