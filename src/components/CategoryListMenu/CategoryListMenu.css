@@ -1,0 +1,23 @@
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper .categoria-select {
+  appearance: none;
+  background-color: transparent;
+  padding: 0.5rem;
+  border: 0;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.select-wrapper::after {
+  content: "\1F81F";
+  font-family: "Lucide";
+  position: absolute;
+  color: rgba(0, 0, 0, 0.65);
+  right: 10px;
+  top: 50%;
+  transform: translateY(-40%);
+  pointer-events: none;
+}

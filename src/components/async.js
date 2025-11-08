@@ -11,8 +11,7 @@ export async function getProducts() {
 }
 
 export async function getProductById(id) {
-  const response = await getProducts();
-  const products = await response.json();
+  const products = await getProducts();
   const product = products.find((prod) => prod.id == id);
   return product;
 }

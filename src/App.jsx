@@ -4,7 +4,7 @@ import MainLayout from "./layouts/MainLayout/MainLayout";
 import EmptyLayout from "./layouts/EmptyLayout/EmptyLayout";
 import Products from "./pages/Products";
 import CartDetail from "./pages/CartDetail";
-import ProductDetail from "./pages/ProductDetail";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 

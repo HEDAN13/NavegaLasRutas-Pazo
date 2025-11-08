@@ -1,4 +1,6 @@
 import CartWidget from "../CartWidget/CartWidget";
+import CategoryListMenu from "../CategoryListMenu/CategoryListMenu";
+import { NavLink } from "react-router";
 
 function Navbar() {
   return (
@@ -22,19 +24,17 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink className="nav-link active" to={"/"}>
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Categorías
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to={"/contactos"}>
                   Contacto
-                </a>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <CategoryListMenu />
               </li>
             </ul>
           </div>
