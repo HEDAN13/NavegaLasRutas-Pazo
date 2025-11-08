@@ -2,8 +2,11 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import EmptyLayout from "./layouts/EmptyLayout/EmptyLayout";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import NotFoundComponent from "./components/NotFoundComponent/NotFoundComponent";
+import Products from "./pages/Products";
+import CartDetail from "./pages/CartDetail";
+import ProductDetail from "./pages/ProductDetail";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -11,13 +14,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
+            <Route path="/" element={<Products />} />
+            <Route path="/cart-detail" element={<CartDetail />} />
             <Route
-              path="/"
-              element={<ItemListContainer saludo="Bienvenidos a la Landing" />}
+              path="/product-detail/:productId"
+              element={<ProductDetail />}
             />
+            <Route path="/contactos" element={<Contact />} />
           </Route>
           <Route element={<EmptyLayout />}>
-            <Route path="*" element={<NotFoundComponent />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>

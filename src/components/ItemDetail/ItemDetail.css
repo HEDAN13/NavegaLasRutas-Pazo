@@ -1,0 +1,22 @@
+.itemDetail {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border: solid black 2px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.itemDetail-image {
+  width: 350px;
+}
+
+.itemDetail-title {
+  text-align: center;
+}
+
+.itemDetail-description {
+  text-align: center;
+}

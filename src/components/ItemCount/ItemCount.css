@@ -1,0 +1,19 @@
+.itemCount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemCount-button {
+  text-align: center;
+  padding: 10px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.itemCount-value {
+  text-align: center;
+  padding: 9px;
+  width: 40px;
+  border: 1px solid black;
+}
